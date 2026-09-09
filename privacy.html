@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SimpleSSH — プライバシーポリシー</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <h1>プライバシーポリシー</h1>
+  <p class="lead">SimpleSSH</p>
+  <nav class="top">
+    <a href="./">サポート</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="https://github.com/Asterisoft/simplessh/issues">お問い合わせ</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+
+<p class="date">最終更新日: 2026年9月9日</p>
+
+<p>
+SimpleSSH（以下「本アプリ」）は、AsteriSoft LLC（以下「当社」）が提供する
+リモート接続クライアントである。本ポリシーは、本アプリが利用者の情報をどのように
+取り扱うかを説明するものである。
+</p>
+
+<h2>1. 当社が収集する情報</h2>
+<p>
+<strong>当社は、本アプリの利用者から一切の情報を収集しない。</strong>
+本アプリは解析ツール・広告・トラッキング（利用者を横断して識別する仕組み）を
+一切組み込んでおらず、当社が運用するサーバも存在しない。
+</p>
+
+<h2>2. 利用者のデータがどこに保存されるか</h2>
+<p>本アプリが扱うデータの保存先は次のとおりである。いずれも利用者自身の管理下にある。</p>
+<table>
+  <tr><th>データ</th><th>保存先</th><th>当社からの参照</th></tr>
+  <tr>
+    <td>接続先の情報（表示名・ホスト名・ポート・ユーザ名・分類・色など）</td>
+    <td>端末内のデータベース、および利用者の iCloud（プライベートデータベース）</td>
+    <td>できない</td>
+  </tr>
+  <tr>
+    <td>パスワード・秘密鍵</td>
+    <td>iCloud キーチェーン（利用者の Apple アカウントで暗号化される）</td>
+    <td>できない</td>
+  </tr>
+  <tr>
+    <td>接続履歴・マクロ・起動時スクリプト・ブックマーク</td>
+    <td>端末内、および利用者の iCloud（プライベートデータベース）</td>
+    <td>できない</td>
+  </tr>
+  <tr>
+    <td>端末セッションの記録（既定では無効）</td>
+    <td>端末内のみ。iCloud へは同期しない</td>
+    <td>できない</td>
+  </tr>
+</table>
+<p>
+iCloud に保存されたデータは利用者の Apple アカウントに属するものであり、
+当社はこれを参照する手段を持たない。Apple による取り扱いについては
+Apple のプライバシーポリシーを参照されたい。
+</p>
+
+<h2>3. 通信先</h2>
+<p>
+本アプリが通信するのは、<strong>利用者が自ら登録した接続先</strong>（SSH・SFTP・VNC・RDP の
+サーバ）と、iCloud 同期のための Apple のサーバだけである。
+当社のサーバへ接続することはない。
+</p>
+
+<h2>4. AI 機能について</h2>
+<p>
+本アプリには、コマンドの入力を補助する AI 機能を任意で利用できる仕組みがある。
+</p>
+<ul>
+  <li>
+    <strong>端末内で動作する Apple の基盤モデル（Apple Intelligence）を使う場合</strong>、
+    入力内容は端末の外へ出ない。
+  </li>
+  <li>
+    <strong>利用者が外部の AI API を設定した場合</strong>、その接続先（URL）と資格情報は
+    利用者自身が入力したものであり、送信先も利用者が指定した事業者となる。
+    このとき、AI へ渡す文脈（直近の端末の出力を含みうる）はその事業者へ送信される。
+    <strong>既定では未設定であり、設定しない限り外部への送信は発生しない。</strong>
+    送信先事業者における取り扱いについては、当該事業者のポリシーを確認されたい。
+  </li>
+</ul>
+
+<h2>5. 第三者への提供</h2>
+<p>当社は利用者の情報を保有しないため、第三者へ提供することもない。</p>
+
+<h2>6. 子どもの個人情報</h2>
+<p>
+本アプリは特定の年齢層を対象とするものではなく、当社は利用者から情報を収集しないため、
+子どもの個人情報を取得することもない。
+</p>
+
+<h2>7. 本ポリシーの変更</h2>
+<p>
+本ポリシーを変更する場合は、本ページを更新し、冒頭の最終更新日を改める。
+</p>
+
+<h2>8. 問い合わせ先</h2>
+<p>
+本ポリシーおよび本アプリについての問い合わせは、<strong>GitHub の Issues</strong> で受け付けている。
+</p>
+<p>
+<a href="https://github.com/Asterisoft/simplessh/issues/new">新しく問い合わせる</a>
+／
+<a href="https://github.com/Asterisoft/simplessh/issues">これまでの問い合わせを見る</a>
+</p>
+<p>AsteriSoft LLC</p>
+
+<footer><div>
+  © 2026 AsteriSoft LLC ／
+  <a href="./">サポート</a>
+</div></footer>
+</div>
+</body>
+</html>
