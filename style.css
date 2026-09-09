@@ -32,3 +32,5 @@ footer { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.2re
          color: var(--muted); font-size: .88rem; }
 code { background: var(--card); padding: .1rem .35rem; border-radius: .25rem;
        font-size: .9em; }
+/* 見出しで始まる本文の先頭は、ヘッダとの間が二重に空くので詰める */
+.wrap > h2:first-child, .wrap > h1:first-child { margin-top: .6rem; }
