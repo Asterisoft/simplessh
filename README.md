@@ -1,6 +1,6 @@
 # SimpleSSH
 
-iPhone・iPad・Mac・Apple Vision Pro で使える、普段使いに使えるシンプルな SSH ターミナル **SimpleSSH** の
+iPhone・iPad・Mac・Apple Vision Pro 向けの、普段使いに使えるシンプルな SSH ターミナル **SimpleSSH** の
 公開ページと、利用者からの問い合わせ窓口。
 
 - サポート: https://asterisoft.github.io/simplessh/
