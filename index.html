@@ -4,107 +4,162 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SimpleSSH — サポート</title>
+<meta name="description" content="iPhone・iPad・Mac・Apple Vision Pro で動く SSH ターミナルと SFTP ファイラー、SimpleSSH のサポートページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site"><div class="wrap">
-  <h1>SimpleSSH</h1>
-  <p class="lead">iPhone・iPad・Mac・Apple Vision Pro で動く SSH クライアント</p>
-  <nav class="top">
-    <a href="./">サポート</a>
-    <a href="./privacy.html">プライバシーポリシー</a>
-    <a href="https://github.com/Asterisoft/simplessh/issues">お問い合わせ</a>
-  </nav>
-</div></header>
 
-<div class="wrap">
+<header class="masthead">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">&gt;_</div>
+        <span class="brand-name">SimpleSSH</span>
+      </div>
+      <nav class="nav">
+        <a href="./" aria-current="page">サポート</a>
+        <a href="./privacy.html">プライバシーポリシー</a>
+        <a href="https://github.com/Asterisoft/simplessh/issues">お問い合わせ</a>
+      </nav>
+    </div>
 
-<h2>SimpleSSH について</h2>
-<p>
-SimpleSSH は、SSH でのサーバの操作と SFTP でのファイルの受け渡しを 1 つのアプリでまとめて扱う
-SSH クライアントである。端末とファイル一覧を、同じウィンドウのタブの中で並べて使える。
-</p>
+    <div class="hero">
+      <div class="eyebrow">SUPPORT</div>
+      <h1>サーバの操作とファイルの受け渡しを、<br>ひとつのアプリにまとめました。</h1>
+      <p>
+        SimpleSSH は、iPhone・iPad・Mac・Apple Vision Pro で動くリモート接続クライアントです。
+        SSH での端末操作と、SFTP でのファイル転送を、同じウィンドウのタブの中で並べて使えます。
+      </p>
+    </div>
+  </div>
+</header>
 
-<h2>主な機能</h2>
+<main class="wrap">
 
-<h3>SSH ターミナル</h3>
-<ul>
-  <li>パスワード認証と公開鍵認証（Ed25519 / RSA）</li>
-  <li>xterm 互換の端末。Sixel と iTerm2 形式のインライン画像の表示</li>
-  <li>EUC-JP / Shift_JIS の文字コードへの対応</li>
-  <li>踏み台サーバを経由する多段接続（ProxyJump）</li>
-  <li>ホスト鍵を初回接続時に確認し、以後の変化を検出する</li>
-  <li>Mac では <code>ssh_config</code> から接続先を取り込める</li>
-</ul>
+  <section>
+    <div class="eyebrow-dark">FEATURES</div>
+    <h2>主な機能</h2>
 
-<h3>SFTP でのファイル操作</h3>
-<ul>
-  <li>アップロード、ダウンロード、移動、削除</li>
-  <li>Markdown の表・画像・HTML・PDF・SVG のその場でのプレビュー</li>
-  <li>よく開く場所のブックマーク登録</li>
-</ul>
+    <div class="cards">
 
-<h3>そのほか</h3>
-<ul>
-  <li>タブをドラッグして落とした位置で、移動するか分割するかが決まる（Mac では画面の外へ落とすと別ウィンドウ）</li>
-  <li>iPhone / iPad ではソフトキーボードの上に Esc・Ctrl・矢印・F1〜F12 などのキー行が出る</li>
-  <li>よく使うコマンドをマクロとして登録し、1 タップで送れる</li>
-  <li>接続時に自動で流すスクリプトを接続先ごとに設定できる</li>
-  <li>接続先の情報は iCloud で同期し、秘密鍵とパスワードは iCloud キーチェーンに保存する</li>
-</ul>
+      <div class="card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3550" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M7 10l2.6 2.4L7 14.8"/><path d="M12.6 15h4.6"/></svg>
+        <h3>SSH ターミナル</h3>
+        <p>
+          パスワード認証と公開鍵認証（Ed25519 / RSA）に対応しています。踏み台サーバを経由する
+          多段接続（ProxyJump）が使え、ホスト鍵は初回の接続時に確認して、以後の変化を検出します。
+        </p>
+      </div>
 
-<h2>動作環境</h2>
-<table>
-  <tr><th>プラットフォーム</th><th>必要なバージョン</th></tr>
-  <tr><td>iPhone / iPad</td><td>iOS 17 / iPadOS 17 以降</td></tr>
-  <tr><td>Mac</td><td>macOS 15 以降（Apple シリコン）</td></tr>
-  <tr><td>Apple Vision Pro</td><td>visionOS 1.0 以降</td></tr>
-</table>
-<p>対応言語: 日本語・英語・簡体中文・한국어</p>
+      <div class="card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3550" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5a2 2 0 012-2h4.2l2 2.4H19a2 2 0 012 2v8.6a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M12 11.4v5"/><path d="M9.6 13.8L12 11.4l2.4 2.4"/></svg>
+        <h3>SFTP でのファイル操作</h3>
+        <p>
+          アップロード・ダウンロード・移動・削除ができます。Markdown の表、画像、HTML、PDF、SVG は
+          その場でプレビューでき、よく開く場所はブックマークとして接続先の下に並びます。
+        </p>
+      </div>
 
-<h2>お問い合わせ</h2>
-<div class="card">
-  <p>
-    ご質問・不具合の報告・機能のご要望は、<strong>GitHub の Issues</strong> で受け付けている。
-  </p>
-  <p>
-    <a href="https://github.com/Asterisoft/simplessh/issues/new">新しく問い合わせる</a>
-    ／
-    <a href="https://github.com/Asterisoft/simplessh/issues">これまでの問い合わせを見る</a>
-  </p>
-  <p class="date">
-    GitHub のアカウントが必要である。不具合の報告では、
-    <strong>お使いの機種・OS のバージョン・アプリのバージョン</strong>と、
-    <strong>何をしたときに何が起きたか</strong>を書き添えていただけると調査が早い。
-  </p>
-</div>
+      <div class="card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3550" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="7" height="7" rx="1.8"/><rect x="14" y="4.5" width="7" height="7" rx="1.8"/><rect x="3" y="15" width="7" height="4.5" rx="1.5"/><rect x="14" y="15" width="7" height="4.5" rx="1.5"/></svg>
+        <h3>接続先の整理</h3>
+        <p>
+          グループと識別色で接続先を分類できます。色はアイコンとタブの両方に出るので、
+          本番と検証を取り違えにくくなります。ホスト名での絞り込みにも対応しています。
+        </p>
+      </div>
 
-<h2>よくある質問</h2>
+      <div class="card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3550" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6.5" width="19" height="11" rx="2"/><path d="M6 10h.01M9.4 10h.01M12.8 10h.01M16.2 10h.01"/><path d="M7.4 14h9.2"/></svg>
+        <h3>入力の支援</h3>
+        <p>
+          iPhone と iPad では、ソフトキーボードの上に Esc・Ctrl・矢印・F1〜F12 などのキー行が出ます。
+          接続したときに自動で流すスクリプトを接続先ごとに設定でき、ポート転送（ローカル転送）にも対応しています。
+        </p>
+      </div>
 
-<h3>接続先の情報や鍵はどこに保存されるのか</h3>
-<p>
-接続先の情報はご自身の iCloud（プライベートデータベース）に、パスワードと秘密鍵は
-iCloud キーチェーンに保存される。<strong>開発者がこれらを参照する手段は無い。</strong>
-詳しくは<a href="./privacy.html">プライバシーポリシー</a>を参照されたい。
-</p>
+    </div>
+  </section>
 
-<h3>別の端末で登録した接続先が出てこない</h3>
-<p>
-同じ Apple アカウントでサインインしていること、および「設定」で iCloud Drive と
-iCloud キーチェーンが有効になっていることを確認していただきたい。
-同期が使えない状態のときは、アプリの一覧の上部にその旨が表示される。
-</p>
+  <section>
+    <div class="eyebrow-dark">REQUIREMENTS</div>
+    <h2>動作環境</h2>
+    <div class="table cols-2">
+      <div class="row head"><span>PLATFORM</span><span>VERSION</span></div>
+      <div class="row"><span>iPhone / iPad</span><span>iOS 17・iPadOS 17 以降</span></div>
+      <div class="row"><span>Mac</span><span>macOS 15 以降（Apple シリコン）</span></div>
+      <div class="row"><span>Apple Vision Pro</span><span>visionOS 1.0 以降</span></div>
+    </div>
+    <p class="note">対応言語は、日本語・英語・簡体中文・한국어 です。</p>
+  </section>
 
-<h3>Intel の Mac で使えるか</h3>
-<p>
-現在の Mac 版は Apple シリコン専用である。
-</p>
+  <section>
+    <div class="eyebrow-dark">CONTACT</div>
+    <h2>お問い合わせ</h2>
+    <div class="contact">
+      <div class="body">
+        <div class="lead">ご質問・不具合の報告・機能のご要望をお待ちしています。</div>
+        <p>
+          GitHub の Issues で受け付けています。不具合のご報告では、
+          <span class="field">お使いの機種と OS のバージョン</span>・<span class="field">アプリのバージョン</span>・<span class="field">何をしたときに何が起きたか</span>
+          を書き添えていただけると、調査が早く進みます。
+        </p>
+      </div>
+      <div class="cta-col">
+        <a class="cta" href="https://github.com/Asterisoft/simplessh/issues/new">問い合わせる</a>
+        <span class="cta-sub">GitHub のアカウントが必要です</span>
+      </div>
+    </div>
+  </section>
 
-<footer><div>
-  © 2026 AsteriSoft LLC ／
-  <a href="./privacy.html">プライバシーポリシー</a>
-</div></footer>
+  <section>
+    <div class="eyebrow-dark">FAQ</div>
+    <h2>よくある質問</h2>
 
-</div>
+    <div class="faq">
+      <div class="qa">
+        <h3>接続先の情報や鍵は、どこに保存されますか</h3>
+        <p>
+          接続先の情報はお客様の iCloud（プライベートデータベース）に、パスワードと秘密鍵は
+          iCloud キーチェーンに保存されます。開発者がこれらを参照する手段はありません。
+          詳しくは<a href="./privacy.html">プライバシーポリシー</a>をご覧ください。
+        </p>
+      </div>
+      <div class="qa">
+        <h3>別の端末で登録した接続先が出てきません</h3>
+        <p>
+          同じ Apple アカウントでサインインしていること、iCloud Drive と iCloud キーチェーンが
+          有効になっていることをご確認ください。同期が使えない状態のときは、一覧の上部にその旨を表示します。
+        </p>
+      </div>
+      <div class="qa">
+        <h3>踏み台を経由した接続はできますか</h3>
+        <p>
+          できます。接続先の設定で踏み台となるホストを指定すると、多段の接続（ProxyJump）で繋がります。
+          踏み台は何段でも重ねられます。
+        </p>
+      </div>
+      <div class="qa">
+        <h3>Intel の Mac で使えますか</h3>
+        <p>現在の Mac 版は Apple シリコン専用です。Intel の Mac には対応していません。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AsteriSoft LLC</span>
+    <div class="foot-links">
+      <a href="./">サポート</a>
+      <a href="./privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

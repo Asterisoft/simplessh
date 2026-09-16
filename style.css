@@ -1,36 +1,186 @@
-:root { color-scheme: light dark; --fg: #1c1c1e; --bg: #ffffff; --muted: #6b6b70;
-        --line: #d8d8dd; --accent: #0a63c9; --card: #f6f6f8; }
-@media (prefers-color-scheme: dark) {
-  :root { --fg: #ececf0; --bg: #131316; --muted: #9a9aa2; --line: #34343a;
-          --accent: #6aa9f0; --card: #1d1d21; }
+/* SimpleSSH 公開サイト
+   配色はアプリアイコンに合わせている（濃紺→ティールの傾斜と、琥珀色の差し色）。
+   明るい紙面に固定する意図の設計なので、color-scheme は light を明示する
+   （指定しないと、暗い外観の環境で背景だけが勝手に反転して読みにくくなる）。 */
+
+:root {
+  color-scheme: light;
+  --page: #F6F7F9;
+  --ink: #121721;
+  --ink-2: #2C3444;
+  --ink-3: #5A6478;
+  --card: #FFFFFF;
+  --line: #E2E6EC;
+  --line-2: #EDF0F4;
+  --card-head: #FAFBFC;
+  --accent: #A4490B;
+  --accent-hover: #7C3606;
+  --ember: #FF9E3D;
+  --ember-ink: #241000;
+  --navy: #101A2E;
+  --teal: #0B6073;
+  --masthead: linear-gradient(135deg, #0D1A3D 0%, #0A3550 52%, #085C6B 100%);
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont,
+          "Hiragino Sans", "Noto Sans JP", sans-serif;
 }
+
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg);
-       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-       line-height: 1.85; }
-.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.2rem 5rem; }
-header.site { border-bottom: 1px solid var(--line); }
-header.site .wrap { padding-bottom: 1.5rem; }
-h1 { font-size: 1.9rem; margin: 0 0 .3rem; letter-spacing: .01em; }
-h2 { font-size: 1.2rem; margin-top: 2.6rem; padding-bottom: .3rem;
-     border-bottom: 1px solid var(--line); }
-h3 { font-size: 1.02rem; margin-top: 1.8rem; }
-p, li { font-size: .98rem; }
-.lead { color: var(--muted); margin: 0; }
-a { color: var(--accent); }
-nav.top { margin-top: 1rem; font-size: .92rem; }
-nav.top a { margin-right: 1.2rem; }
-table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .93rem;
-        display: block; overflow-x: auto; }
-th, td { border: 1px solid var(--line); padding: .5rem .7rem; text-align: left;
-         vertical-align: top; }
-th { background: var(--card); white-space: nowrap; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: .6rem;
-        padding: 1rem 1.2rem; margin: 1.2rem 0; }
-.date { color: var(--muted); font-size: .88rem; }
-footer { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.2rem;
-         color: var(--muted); font-size: .88rem; }
-code { background: var(--card); padding: .1rem .35rem; border-radius: .25rem;
-       font-size: .9em; }
-/* 見出しで始まる本文の先頭は、ヘッダとの間が二重に空くので詰める */
-.wrap > h2:first-child, .wrap > h1:first-child { margin-top: .6rem; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: var(--mono); }
+
+a { color: var(--accent); text-decoration: none;
+    border-bottom: 1px solid rgba(164, 73, 11, .35); }
+a:hover { color: var(--accent-hover); border-bottom-color: var(--accent-hover); }
+
+p { margin: 0; font-size: 15.5px; line-height: 1.95; color: var(--ink-2);
+    text-wrap: pretty; }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+/* ── 見出し帯 ───────────────────────────────── */
+
+.masthead { background: var(--masthead); position: relative; overflow: hidden; }
+.masthead::after {                       /* 火花のにじみ。装飾なので読み上げ対象にしない */
+  content: ""; position: absolute; right: -80px; top: -120px;
+  width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 158, 61, .20) 0%, rgba(255, 158, 61, 0) 68%);
+  pointer-events: none;
+}
+.masthead .wrap { position: relative; z-index: 1; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between;
+          gap: 20px; flex-wrap: wrap; padding: 26px 0 0; }
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand-mark { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+              background: linear-gradient(135deg, #12264F, #0B6073);
+              border: 1px solid rgba(255, 255, 255, .18);
+              display: flex; align-items: center; justify-content: center;
+              color: #FFFFFF; font-family: var(--mono); font-size: 17px;
+              font-weight: 700; letter-spacing: -.04em; }
+.brand-name { color: #FFFFFF; font-size: 18px; font-weight: 700; letter-spacing: .02em; }
+
+.nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+.nav a { font-family: var(--mono); font-size: 13px; color: rgba(255, 255, 255, .62);
+         border-bottom: none; padding-bottom: 3px; }
+.nav a:hover { color: #FFFFFF; }
+.nav a[aria-current="page"] { color: #FFFFFF; border-bottom: 2px solid var(--ember); }
+
+.hero { max-width: 860px; padding: 66px 0 60px; }
+.hero.compact { padding: 52px 0 52px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .22em;
+           color: #FFB566; margin-bottom: 18px; }
+.hero h1 { color: #FFFFFF; font-size: 38px; font-weight: 700; line-height: 1.45;
+           letter-spacing: .01em; margin: 0; }
+.hero h1.sm { font-size: 33px; line-height: 1.5; }
+.hero p { color: rgba(255, 255, 255, .78); margin-top: 24px; font-size: 16px; }
+.updated { font-family: var(--mono); font-size: 12.5px;
+           color: rgba(255, 255, 255, .55); margin-top: 24px; }
+
+/* ── 本文 ───────────────────────────────────── */
+
+main { padding-bottom: 88px; }
+section { margin-top: 72px; }
+.eyebrow-dark { font-family: var(--mono); font-size: 12px; letter-spacing: .22em;
+                color: var(--accent); margin-bottom: 13px; }
+h2 { font-size: 25px; line-height: 1.35; margin: 0; letter-spacing: .01em; }
+h3 { font-size: 17px; line-height: 1.5; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+         gap: 18px; margin-top: 30px; }
+.card { background: var(--card); border: 1px solid var(--line);
+        border-radius: 14px; padding: 26px 28px 28px; }
+.card svg { display: block; }
+.card h3 { margin-top: 15px; }
+.card p { margin-top: 9px; font-size: 14.5px; line-height: 1.9; }
+
+/* 表。狭い画面では 1 行 2 段に折り返す */
+.table { background: var(--card); border: 1px solid var(--line);
+         border-radius: 14px; margin-top: 24px; overflow: hidden; }
+.table .row { display: grid; gap: 8px 24px; padding: 16px 28px;
+              border-bottom: 1px solid var(--line-2); }
+.table .row:last-child { border-bottom: none; }
+.table .head { background: var(--card-head); }
+.table .head span { font-family: var(--mono); font-size: 12.5px;
+                    color: var(--ink-3); letter-spacing: .1em; }
+.table .row span { font-size: 15px; }
+.cols-2 .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cols-3 .row { grid-template-columns: 1.3fr 1.1fr .8fr; }
+.yes { font-family: var(--mono); font-size: 13px; color: var(--teal); }
+.note { margin-top: 15px; font-size: 14px; color: var(--ink-3); }
+
+/* 問い合わせ */
+.contact { background: var(--navy); border-radius: 16px; margin-top: 24px;
+           padding: 38px 42px; display: flex; align-items: center;
+           justify-content: space-between; gap: 44px; flex-wrap: wrap; }
+.contact .lead { color: #FFFFFF; font-size: 19px; font-weight: 700; line-height: 1.6; }
+.contact p { color: rgba(255, 255, 255, .72); margin-top: 13px;
+             font-size: 14.5px; line-height: 1.9; }
+.contact .body { flex: 1 1 380px; }
+.contact .field { font-family: var(--mono); color: #FFC489; }
+.cta-col { display: flex; flex-direction: column; gap: 11px; }
+.cta { background: var(--ember); color: var(--ember-ink); font-size: 15px;
+       font-weight: 700; padding: 14px 26px; border-radius: 10px;
+       text-align: center; white-space: nowrap; border-bottom: none; }
+.cta:hover { background: #FFB566; color: var(--ember-ink); }
+.cta-sub { color: rgba(255, 255, 255, .6); font-size: 12.5px; text-align: center; }
+
+/* よくある質問 */
+.faq { margin-top: 24px; border-top: 1px solid var(--line); }
+.faq .qa { padding: 24px 0; border-bottom: 1px solid var(--line);
+           display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.faq p { font-size: 14.5px; line-height: 1.9; }
+
+/* プライバシーポリシーの条 */
+.clauses { display: flex; flex-direction: column; gap: 48px; margin-top: 56px; }
+.clauses h2 { font-size: 21px; line-height: 1.5; }
+.clauses h2 .num { font-family: var(--mono); color: var(--accent); margin-right: 12px; }
+.clauses p { margin-top: 13px; line-height: 2.0; }
+.panel { background: var(--card); border: 1px solid var(--line);
+         border-radius: 12px; padding: 19px 23px; }
+.panels { display: flex; flex-direction: column; gap: 13px; margin-top: 17px; }
+.panel p { margin-top: 0; font-size: 14.5px; line-height: 1.9; }
+.panel strong { color: var(--ink); }
+
+/* ── 脚注 ───────────────────────────────────── */
+
+footer { background: var(--navy); }
+footer .wrap { display: flex; align-items: center; justify-content: space-between;
+               gap: 18px; flex-wrap: wrap; padding-top: 32px; padding-bottom: 32px; }
+footer span, footer a { font-family: var(--mono); font-size: 12.5px; }
+footer span { color: rgba(255, 255, 255, .5); }
+footer a { color: rgba(255, 255, 255, .72); border-bottom: none; }
+footer a:hover { color: #FFFFFF; }
+.foot-links { display: flex; gap: 24px; }
+
+/* ── 狭い画面 ───────────────────────────────── */
+
+@media (max-width: 860px) {
+  .wrap { padding: 0 20px; }
+  .hero { padding: 44px 0 42px; }
+  .hero h1 { font-size: 27px; line-height: 1.55; }
+  .hero h1.sm { font-size: 24px; }
+  .hero p { font-size: 14.5px; margin-top: 18px; }
+  section { margin-top: 48px; }
+  h2 { font-size: 21px; }
+  .cards { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .card { padding: 20px 22px 22px; }
+  .cols-2 .row, .cols-3 .row { grid-template-columns: minmax(0, 1fr); }
+  .table .row { padding: 15px 22px; }
+  .table .head { display: none; }        /* 1 列になると見出しの対応が崩れるため隠す */
+  .table .row span:first-child { font-weight: 700; }
+  .contact { padding: 26px 24px; gap: 22px; }
+  .contact .lead { font-size: 16px; }
+  .cta-col { width: 100%; }
+  .faq .qa { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .clauses { gap: 38px; margin-top: 40px; }
+  main { padding-bottom: 56px; }
+}
