@@ -43,14 +43,15 @@ T["ja"] = {
     "site_title": "SimpleSSH",
     "support_title": "SimpleSSH — サポート",
     "privacy_title": "SimpleSSH — プライバシーポリシー",
-    "support_meta": "iPhone・iPad・Mac・Apple Vision Pro で動く SSH ターミナルと SFTP ファイラー、SimpleSSH のサポートページです。",
+    "support_meta": "普段使いに使えるシンプルな SSH ターミナル SimpleSSH（iPhone・iPad・Mac・Apple Vision Pro）のサポートページです。",
     "privacy_meta": "SimpleSSH のプライバシーポリシーです。当社は利用者から情報を収集しません。",
     "nav_support": "サポート", "nav_privacy": "プライバシーポリシー", "nav_contact": "お問い合わせ",
     "eyebrow_support": "SUPPORT", "eyebrow_privacy": "PRIVACY POLICY",
-    "hero_h1": "サーバの操作とファイルの受け渡しを、<br>ひとつのアプリにまとめました。",
-    "hero_p": "SimpleSSH は、iPhone・iPad・Mac・Apple Vision Pro で動く SSH クライアントです。"
-              "SSH での端末操作と、SFTP でのファイル転送を、同じウィンドウのタブの中で並べて使えます。",
-    "eyebrow_features": "FEATURES", "h2_features": "主な機能",
+    "hero_h1": "普段使いに使える、<br>シンプルな SSH ターミナル。",
+    "hero_p": "SimpleSSH は、iPhone・iPad・Mac・Apple Vision Pro で使える SSH ターミナルです。"
+              "派手な機能よりも、ふだん使っている端末の延長のように使えることを大切にしています。"
+              "端末と SFTP のファイル一覧を、同じウィンドウのタブの中で並べて使えます。",
+    "eyebrow_features": "FEATURES", "h2_features": "できること",
     "cards": [
         (ICON_TERMINAL, "SSH ターミナル",
          "パスワード認証と公開鍵認証（Ed25519 / RSA）に対応しています。踏み台サーバを経由する"
@@ -138,15 +139,16 @@ T["en"] = {
     "site_title": "SimpleSSH",
     "support_title": "SimpleSSH — Support",
     "privacy_title": "SimpleSSH — Privacy Policy",
-    "support_meta": "Support for SimpleSSH, an SSH terminal and SFTP file browser for iPhone, iPad, Mac and Apple Vision Pro.",
+    "support_meta": "Support for SimpleSSH — a simple SSH terminal for everyday use on iPhone, iPad, Mac and Apple Vision Pro.",
     "privacy_meta": "The SimpleSSH privacy policy. We collect no information from the people who use the app.",
     "nav_support": "Support", "nav_privacy": "Privacy", "nav_contact": "Contact",
     "eyebrow_support": "SUPPORT", "eyebrow_privacy": "PRIVACY POLICY",
-    "hero_h1": "Server work and file transfer,<br>together in one app.",
-    "hero_p": "SimpleSSH is an SSH client for iPhone, iPad, Mac and Apple Vision Pro. "
-              "Working on a server over SSH and moving files over SFTP sit side by side, "
+    "hero_h1": "A simple SSH terminal,<br>for everyday use.",
+    "hero_p": "SimpleSSH is an SSH terminal for iPhone, iPad, Mac and Apple Vision Pro. "
+              "Rather than showy features, it aims to feel like an extension of the terminal "
+              "you already use. The terminal and the SFTP file list sit side by side, "
               "in tabs within one window.",
-    "eyebrow_features": "FEATURES", "h2_features": "What it does",
+    "eyebrow_features": "FEATURES", "h2_features": "What you can do",
     "cards": [
         (ICON_TERMINAL, "SSH terminal",
          "Password and public key authentication (Ed25519 / RSA) are supported. You can connect "
@@ -238,14 +240,15 @@ T["zh-Hans"] = {
     "site_title": "SimpleSSH",
     "support_title": "SimpleSSH — 支持",
     "privacy_title": "SimpleSSH — 隐私政策",
-    "support_meta": "SimpleSSH 的支持页面。可在 iPhone、iPad、Mac 和 Apple Vision Pro 上使用的 SSH 终端与 SFTP 文件管理应用。",
+    "support_meta": "SimpleSSH 的支持页面。可在 iPhone、iPad、Mac 和 Apple Vision Pro 上日常使用的简洁 SSH 终端。",
     "privacy_meta": "SimpleSSH 的隐私政策。我们不收集用户的任何信息。",
     "nav_support": "支持", "nav_privacy": "隐私政策", "nav_contact": "联系我们",
     "eyebrow_support": "SUPPORT", "eyebrow_privacy": "PRIVACY POLICY",
-    "hero_h1": "把服务器操作和文件传输，<br>放进同一个应用。",
-    "hero_p": "SimpleSSH 是可在 iPhone、iPad、Mac 和 Apple Vision Pro 上使用的 SSH 客户端。"
-              "通过 SSH 操作服务器，以及通过 SFTP 传输文件，都能在同一个窗口的标签页中并排进行。",
-    "eyebrow_features": "FEATURES", "h2_features": "主要功能",
+    "hero_h1": "可以日常使用的，<br>简洁的 SSH 终端。",
+    "hero_p": "SimpleSSH 是可在 iPhone、iPad、Mac 和 Apple Vision Pro 上使用的 SSH 终端。"
+              "比起花哨的功能，我们更看重它能像平时使用的终端一样自然。"
+              "终端与 SFTP 的文件列表，可以在同一个窗口的标签页中并排使用。",
+    "eyebrow_features": "FEATURES", "h2_features": "可以做到的事",
     "cards": [
         (ICON_TERMINAL, "SSH 终端",
          "支持密码认证与公钥认证（Ed25519 / RSA）。可经由跳板机建立多级连接（ProxyJump），"
@@ -327,14 +330,15 @@ T["ko"] = {
     "site_title": "SimpleSSH",
     "support_title": "SimpleSSH — 지원",
     "privacy_title": "SimpleSSH — 개인정보 처리방침",
-    "support_meta": "iPhone・iPad・Mac・Apple Vision Pro에서 사용하는 SSH 터미널과 SFTP 파일 브라우저, SimpleSSH의 지원 페이지입니다.",
+    "support_meta": "평소에 쓰기 좋은 단순한 SSH 터미널 SimpleSSH(iPhone・iPad・Mac・Apple Vision Pro)의 지원 페이지입니다.",
     "privacy_meta": "SimpleSSH의 개인정보 처리방침입니다. 당사는 이용자로부터 정보를 수집하지 않습니다.",
     "nav_support": "지원", "nav_privacy": "개인정보", "nav_contact": "문의",
     "eyebrow_support": "SUPPORT", "eyebrow_privacy": "PRIVACY POLICY",
-    "hero_h1": "서버 작업과 파일 주고받기를,<br>하나의 앱에 담았습니다.",
-    "hero_p": "SimpleSSH는 iPhone・iPad・Mac・Apple Vision Pro에서 사용하는 SSH 클라이언트입니다. "
-              "SSH로 서버를 다루는 일과 SFTP로 파일을 옮기는 일을, 한 창의 탭 안에서 나란히 할 수 있습니다.",
-    "eyebrow_features": "FEATURES", "h2_features": "주요 기능",
+    "hero_h1": "평소에 쓰기 좋은,<br>단순한 SSH 터미널.",
+    "hero_p": "SimpleSSH는 iPhone・iPad・Mac・Apple Vision Pro에서 쓰는 SSH 터미널입니다. "
+              "화려한 기능보다, 평소 쓰던 터미널의 연장선처럼 쓸 수 있는 것을 중요하게 여깁니다. "
+              "터미널과 SFTP 파일 목록을, 한 창의 탭 안에서 나란히 쓸 수 있습니다.",
+    "eyebrow_features": "FEATURES", "h2_features": "할 수 있는 일",
     "cards": [
         (ICON_TERMINAL, "SSH 터미널",
          "암호 인증과 공개 키 인증(Ed25519 / RSA)을 지원합니다. 배스천 서버를 거치는 다단 연결"
