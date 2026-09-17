@@ -184,3 +184,17 @@ footer a:hover { color: #FFFFFF; }
   .clauses { gap: 38px; margin-top: 40px; }
   main { padding-bottom: 56px; }
 }
+
+/* ── 言語切替 ───────────────────────────────── */
+
+.langbar { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+.langbar a { font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, .55);
+             border-bottom: none; padding: 4px 9px; border-radius: 7px; white-space: nowrap; }
+.langbar a:hover { color: #FFFFFF; background: rgba(255, 255, 255, .10); }
+.langbar a[aria-current="true"] { color: #FFFFFF; background: rgba(255, 255, 255, .14); }
+.topbar .right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .topbar .right { gap: 12px; width: 100%; }
+  .langbar a { padding: 3px 7px; font-size: 11.5px; }
+}
